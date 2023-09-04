@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const BookingsSchema = mongoose.Schema({
-  shortId: { type: String, required: true },
+  shortId: { type: String, unique: true, required: true },
   name: { type: String, required: true },
   Date: { type: Date, required: true },
   amount: { type: Number, required: true },

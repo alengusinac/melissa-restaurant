@@ -6,8 +6,11 @@ const ShortUniqueId = require('short-unique-id');
 router.post('/create', async (req, res, next) => {
   req.body.shortId = new ShortUniqueId()();
   await BookingsSchema.create(req.body)
-    .then((response) => res.json(response))
-    .catch((err) => res.send(err));
+    .then((response) => res.status(201).json(response))
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: err });
+    });
 });
 
 module.exports = router;
