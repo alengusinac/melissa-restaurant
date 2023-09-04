@@ -1,0 +1,19 @@
+# Daily Standup Report
+
+## Wazzup?
+
+> Yesterday I…, today I will…, I need help with…, I'm stuck with…, TIL…
+
+Idag samlar vi oss och sätter ihop ett grundprojekt samt prata igenom vad för tekniker vi använder och kommer överens om när vi har daily standups.
+
+
+### Björn
+
+
+
+### Abdullah
+
+
+
+### Alen
+
