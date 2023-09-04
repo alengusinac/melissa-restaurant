@@ -1,3 +1,17 @@
+var express = require('express');
+const BookingsSchema = require('../models/bookings');
+var router = express.Router();
+const ShortUniqueId = require('short-unique-id');
+
+router.post('/create', async (req, res, next) => {
+  req.body.shortId = new ShortUniqueId()();
+  await BookingsSchema.create(req.body)
+    .then((response) => res.json(response))
+    .catch((err) => res.send(err));
+});
+
+module.exports = router;
+
 // POST "/search" skicka datum och antal personer. Får lediga bord på ett specifikt datum.
 // POST "/booking/create" skicka bordsnummer, antal personer, namn, klockslag(18 eller 21) och datum. Får bokningsnummer.
 // POST "/booking/cancel" skicka namn, bokningsnummer. Får bekräftelse. softdelete

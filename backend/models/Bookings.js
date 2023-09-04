@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 
 const BookingsSchema = mongoose.Schema({
-  name: {
-    shortId: String,
-    name: String,
-    Date: Date,
-    amount: Number,
-    table: Number,
-    sitting: Number,
-    isDeleted: { type: Boolean, default: false },
-  },
+  shortId: { type: String, required: true },
+  name: { type: String, required: true },
+  Date: { type: Date, required: true },
+  amount: { type: Number, required: true },
+  table: { type: Number, required: true },
+  sitting: { type: Number, required: true },
+  isDeleted: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model('bookings', BookingsSchema);

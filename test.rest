@@ -1,0 +1,6 @@
+POST http://localhost:3000/bookings/create
+Content-Type: application/json
+
+{
+  "name": "Test Testsson"
+}
