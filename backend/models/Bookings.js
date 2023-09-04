@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const BookingsSchema = mongoose.Schema({
   shortId: { type: String, unique: true, required: true },
   name: { type: String, required: true },
-  Date: { type: Date, required: true },
+  Date: { type: String, required: true },
   amount: { type: Number, required: true },
   table: { type: Number, required: true },
   sitting: { type: Number, required: true },

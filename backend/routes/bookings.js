@@ -13,6 +13,20 @@ router.post('/create', async (req, res, next) => {
     res.status(500).json({ error: err });
   }
 });
+
+router.post('/cancel', async (req, res, next) => {
+  try {
+    const booking = await BookingsSchema.findOne(req.body);
+    console.log(booking);
+    if (booking !== null) {
+      booking.isDeleted = true;
+      booking.save();
+    }
+    res.json(booking);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err });
+  }
 });
 
 module.exports = router;

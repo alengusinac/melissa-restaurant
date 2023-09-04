@@ -2,5 +2,19 @@ POST http://localhost:3000/bookings/create
 Content-Type: application/json
 
 {
-  "name": "Test Testsson"
+  "name": "Alen",
+  "Date": "127462359218",
+  "amount": "2",
+  "table": "12",
+  "sitting": "1"
+}
+
+###
+
+POST http://localhost:3000/bookings/cancel
+Content-Type: application/json
+
+{
+  "shortId": "ut5rLn",
+  "name": "Alen"
 }
