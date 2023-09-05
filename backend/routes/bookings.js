@@ -3,6 +3,16 @@ const BookingsSchema = require('../models/bookings');
 var router = express.Router();
 const ShortUniqueId = require('short-unique-id');
 
+router.get('/all', async (req, res) => {
+  try {
+    const bookings = await BookingsSchema.find({});
+    res.json(bookings);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: err });
+  }
+});
+
 router.post('/search', async (req, res) => {
   try {
     const bookings = await BookingsSchema.find(req.body);
