@@ -1,3 +1,4 @@
+//CREATE BOOKING
 POST http://localhost:3000/bookings/create
 Content-Type: application/json
 
@@ -10,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-
+//CANCEL BOOKING
 POST http://localhost:3000/bookings/cancel
 Content-Type: application/json
 
