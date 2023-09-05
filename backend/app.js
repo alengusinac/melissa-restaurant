@@ -15,7 +15,7 @@ async function main() {
 }
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var bookingsRouter = require('./routes/bookings');
 
 var app = express();
 
@@ -27,6 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/bookings', bookingsRouter);
 
 module.exports = app;
