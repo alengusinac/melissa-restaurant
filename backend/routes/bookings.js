@@ -15,6 +15,7 @@ router.get('/all', async (req, res) => {
 
 router.post('/search', async (req, res) => {
   try {
+    // takes new Date().toDateString()
     const bookings = await BookingsSchema.find(req.body);
     if (bookings.length > 0) {
       res.send(bookings);
