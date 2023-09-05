@@ -17,11 +17,19 @@ router.post('/search', async (req, res) => {
   try {
     // takes new Date().toDateString()
     const bookings = await BookingsSchema.find(req.body);
-    if (bookings.length > 0) {
-      res.send(bookings);
-    } else {
-      res.send([]);
+    const tables = [];
+
+    for (let i = 0; i < 15; i++) {
+      const table = i + 1;
+      tables.push({ table: i + 1, sitting: 1 });
+      tables.push({ table: i + 1, sitting: 2 });
     }
+
+    bookings.forEach((booking) => {
+      const tempObj = { table: booking.table, sitting: booking.sitting };
+    });
+
+    res.send(bookings);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err });
