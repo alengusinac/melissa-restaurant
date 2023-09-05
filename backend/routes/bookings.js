@@ -21,15 +21,20 @@ router.post('/search', async (req, res) => {
 
     for (let i = 0; i < 15; i++) {
       const table = i + 1;
-      tables.push({ table: i + 1, sitting: 1 });
-      tables.push({ table: i + 1, sitting: 2 });
+      tables.push({ table: table, sitting: 1 });
+      tables.push({ table: table, sitting: 2 });
     }
 
     bookings.forEach((booking) => {
       const tempObj = { table: booking.table, sitting: booking.sitting };
+      const index = tables.findIndex(
+        (table) =>
+          table.table == tempObj.table && table.sitting == tempObj.sitting
+      );
+      tables.splice(index, 1);
     });
 
-    res.send(bookings);
+    res.send(tables);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err });
