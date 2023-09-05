@@ -34,7 +34,7 @@ router.post('/search', async (req, res) => {
       tables.splice(index, 1);
     });
 
-    res.send(tables);
+    res.json(tables);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err });
