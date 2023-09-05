@@ -1,10 +1,19 @@
+POST http://localhost:3000/bookings/search
+Content-Type: application/json
+
+{
+  "date": "Tue Sep 05 2023"
+}
+
+###
+
 //CREATE BOOKING
 POST http://localhost:3000/bookings/create
 Content-Type: application/json
 
 {
   "name": "Alen",
-  "Date": "127462359218",
+  "date": "Tue Sep 05 2023",
   "amount": "2",
   "table": "12",
   "sitting": "1"
