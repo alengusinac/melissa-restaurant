@@ -1,10 +1,12 @@
 import buttonStyles from "../styles/Button.module.scss";
 
 const Button = ({
+  offset,
   onClick,
   text,
   active,
 }: {
+  offset: boolean;
   onClick:
     | (() => void)
     | ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void);
@@ -13,7 +15,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${buttonStyles.button} ${
+      className={`${offset ? buttonStyles.offset : ""} ${buttonStyles.button} ${
         !active ? buttonStyles.disabled : ""
       }`}
       onClick={onClick}

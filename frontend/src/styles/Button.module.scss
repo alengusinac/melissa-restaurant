@@ -9,6 +9,8 @@
   font-weight: bold;
   box-shadow: 3px 3px 7px rgba(104, 104, 104, 0.3);
   cursor: pointer;
+  max-height: 50px;
+  margin-top: 35px;
 }
 
 .button:hover {
@@ -21,4 +23,10 @@
 
 .disabled:hover {
   border: none;
+}
+
+.offset {
+  position: absolute;
+  top: -20px;
+  margin-top: 0;
 }
