@@ -1,4 +1,5 @@
 import { IBooking } from '../models/IBooking';
+import { ICancelBooking } from '../models/ICancelBooking';
 import { IPostBooking } from '../models/IPostBooking';
 import { ITable } from '../models/ITable';
 import { get, post } from './serviceBase';
@@ -19,5 +20,12 @@ export const searchTablesByDate = async (date: string): Promise<ITable[]> => {
 
 export const postBooking = async (booking: IPostBooking): Promise<IBooking> => {
   const response = await post<IBooking>(`${BASE_URL}/bookings/create`, booking);
+  return response;
+};
+
+export const cancelBooking = async (
+  booking: ICancelBooking
+): Promise<IBooking> => {
+  const response = await post<IBooking>(`${BASE_URL}/bookings/cancel`, booking);
   return response;
 };
