@@ -1,9 +1,7 @@
-export interface IBooking {
-  shortId: string;
+export interface IPostBooking {
   name: string;
   date: string;
   amount: number;
   table: number;
   sitting: number;
-  isDeleted: boolean;
 }
