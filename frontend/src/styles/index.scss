@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Roboto:wght@400;700&display=swap");
+
+* {
+  --primary-color: #000;
+  --secondary-color: #f8e2aa;
+  --title-color: #d5cc77;
+  --body-bg-color: #f7f7f7;
+  --primary-text-color: #393939;
+  --secondary-text-color: #fff;
+  --form-placeholder-color: #7c7c7c;
+  --inactive-button-color: #d5d5d5;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--primary-text-color);
+  }
+}

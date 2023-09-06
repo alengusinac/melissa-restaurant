@@ -1,0 +1,27 @@
+.home {
+  position: relative;
+  min-height: calc(100vh - (100px + 80px));
+  background-image: url("../assets/melissa_bg_bw.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 105px;
+}
+
+.article {
+  max-width: 768px;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: #fff;
+  opacity: 0.8;
+  padding: 35px;
+  margin: 35px;
+}
+
+.description {
+  color: var(--primary-text-color);
+  line-height: 1.9;
+}
