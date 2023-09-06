@@ -1,0 +1,24 @@
+@import "../styles/index.scss";
+
+.button {
+  background-color: var(--secondary-color);
+  color: var(--primary-text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  box-shadow: 3px 3px 7px rgba(104, 104, 104, 0.3);
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 1px solid var(--secondary-color);
+}
+
+.disabled {
+  background-color: var(--inactive-button-color);
+}
+
+.disabled:hover {
+  border: none;
+}
