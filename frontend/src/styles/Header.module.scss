@@ -11,21 +11,21 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--primary-color);
+
+  .title,
+  a,
+  .name {
+    font-family: "Imperial Script", cursive;
+    color: var(--title-color);
+  }
+
+  .name {
+    font-size: 50px;
+  }
 }
 
 .headerHeight {
   height: 100px;
-}
-
-.title,
-a,
-.name {
-  font-family: "Imperial Script", cursive;
-  color: var(--title-color);
-}
-
-.name {
-  font-size: 50px;
 }
 
 @media screen and (min-width: 768px) {
