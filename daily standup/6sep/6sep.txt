@@ -1,0 +1,27 @@
+# Daily Standup Report
+
+## Wazzup?
+
+> Yesterday I…, today I will…, I need help with…, I'm stuck with…, TIL…
+
+
+### Björn
+igår:
+Slutförde detaljer på mockups. samt skapade router och boilerplates för komponenter.
+idag:
+Jobba vidare med landingssida och några komponenter.
+hjälp:
+null
+
+
+### Abdullah
+
+
+
+### Alen
+igår:
+jobbade med search logiken.
+idag:
+skapa tjänst för datahanterting.
+hjälp:
+null
