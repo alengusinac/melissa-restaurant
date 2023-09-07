@@ -1,7 +1,12 @@
 import { FormEvent, useState } from "react"
 import { searchTablesByDate } from "../services/bookingsService"
+import { ITable } from "../models/ITable"
 
-export const SearchForm = () => {
+interface ISearchFormProps {
+  setTables: (tables: ITable[]) => void,
+}
+
+export const SearchForm = ({setTables}: ISearchFormProps) => {
   const [dateInput, setDateInput] = useState(new Date().toLocaleDateString())
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -9,7 +14,9 @@ export const SearchForm = () => {
 
     const date = new Date(dateInput);
     const data = await searchTablesByDate(date.toDateString())
+    setTables(data);
     console.log(data);
+    
     
   }
 
