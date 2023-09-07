@@ -6,11 +6,16 @@
   justify-content: center;
   gap: 10px;
 
-  li {
+  button {
     width: 100px;
     border: 1px solid black;
     border-radius: 10px;
     list-style: none;
     padding: 5px 10px;
+    box-shadow: 1px 1px 1px 1px lightgray;
+
+    &:active {
+      box-shadow: none;
+    }
   }
 }
