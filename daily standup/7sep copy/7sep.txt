@@ -1,0 +1,28 @@
+# Daily Standup Report
+
+## Wazzup?
+
+> Yesterday I…, today I will…, I need help with…, I'm stuck with…, TIL…
+
+
+### Björn
+igår:
+Gjorde klart Home, Header, Footer, Button components.
+idag:
+Uppdatera designen på bookings för att ha med datum boxar och sökknapp.
+Bygga Bookings components.
+hjälp:
+null
+
+
+### Abdullah
+
+
+
+### Alen
+igår:
+Byggde services funktioner för att skapa, ta emot och redigera data. Byggde SearchForm component.
+idag:
+Fortsätta med searchForm och få till props till Search component. kanske göra backend endpoint.
+hjälp:
+null
