@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Search from "./components/Search";
 import BookingConfirmation from "./components/BookingConfirmation";
 import Contact from "./components/Contact";
-import Bookings from "./components/admin/Bookings";
+import HandleBookings from "./components/admin/HandleBookings";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admin/bookings",
-        element: <Bookings />,
+        element: <HandleBookings />,
       },
     ],
   },

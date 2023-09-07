@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  // const [location, setLocation] = useState("");
   const isAtHome = useLocation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -20,7 +19,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // setWindowWidth(window.innerWidth);
     console.log("second");
     if (isAtHome.pathname === "/" && windowWidth < 768) {
       setShowMessage(true);
