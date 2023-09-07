@@ -1,6 +1,8 @@
 import { FormEvent, useState } from "react"
 import { searchTablesByDate } from "../services/bookingsService"
 import { ITable } from "../models/ITable"
+import searchFormStyles from "../styles/SearchForm.module.scss";
+
 
 interface ISearchFormProps {
   setTables: (tables: ITable[]) => void,
@@ -20,7 +22,7 @@ export const SearchForm = ({setTables}: ISearchFormProps) => {
     
   }
 
-  return <form onSubmit={handleSubmit}>
+  return <form onSubmit={handleSubmit} className={searchFormStyles.searchForm}>
     <input type="date" min={new Date().toLocaleDateString('fr-ca')} value={dateInput} onChange={e => setDateInput(e.target.value)} />
     <button>Search Tables</button>
   </form>

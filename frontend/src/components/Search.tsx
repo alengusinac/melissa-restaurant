@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SearchForm } from "./SearchForm";
 import { ITable } from "../models/ITable";
+import { SearchResults } from "./SearchResults";
 
 export const Search = () => {
   const [tables, setTables] = useState<ITable[]>([]);
-  useEffect(() => {
-    console.log(tables);
-    
-  })
+  
   return <>
     <SearchForm setTables={setTables} />
+    <SearchResults tables={tables} />
   </>;
 };
 
