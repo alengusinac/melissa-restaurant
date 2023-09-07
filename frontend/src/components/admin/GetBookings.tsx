@@ -1,5 +1,5 @@
 const GetBookings = () => {
-  return <div>GetBookings</div>;
+  return <div>GetBooking component goes here</div>;
 };
 
 export default GetBookings;
