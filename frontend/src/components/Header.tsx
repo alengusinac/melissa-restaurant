@@ -11,15 +11,11 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    console.log("irun...");
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    console.log("second");
     if (isAtHome.pathname === "/" && windowWidth < 768) {
       setShowMessage(true);
     } else {

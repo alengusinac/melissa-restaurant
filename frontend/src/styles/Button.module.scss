@@ -10,11 +10,12 @@
   box-shadow: 3px 3px 7px rgba(104, 104, 104, 0.3);
   cursor: pointer;
   max-height: 50px;
-  // margin-top: 35px;
+  margin: 1px;
 }
 
 .button:hover {
   border: 1px solid var(--secondary-color);
+  margin: 0;
 }
 
 .disabled {
