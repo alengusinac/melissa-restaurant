@@ -2,6 +2,10 @@ GET http://localhost:3000/bookings/all
 
 ###
 
+GET http://localhost:3000/bookings/XLRQn6
+
+###
+
 POST http://localhost:3000/bookings/search
 Content-Type: application/json
 
