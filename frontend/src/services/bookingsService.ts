@@ -11,6 +11,11 @@ export const getAllBookings = async (): Promise<IBooking[]> => {
   return response;
 };
 
+export const getBookingById = async (id: string): Promise<IBooking> => {
+  const response = await get<IBooking>(`${BASE_URL}/bookings/${id}`);
+  return response;
+};
+
 export const searchTablesByDate = async (date: string): Promise<ITable[]> => {
   const response = await post<ITable[]>(`${BASE_URL}/bookings/search`, {
     date: date,

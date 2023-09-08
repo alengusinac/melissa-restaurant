@@ -13,6 +13,18 @@ router.get('/all', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  const id = req.params.id;
+  console.log('ID!!!');
+  try {
+    const booking = await BookingsSchema.findOne({ shortId: id });
+    res.json(booking);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: err });
+  }
+});
+
 router.post('/search', async (req, res) => {
   try {
     // takes new Date().toDateString()
