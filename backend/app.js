@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/melissa-restaurant');
+  await mongoose.connect(
+    'mongodb+srv://alen:alenalen@cluster0.sususyz.mongodb.net/melissa-restaurant'
+  );
 
   console.log('Connected to database.');
 }
