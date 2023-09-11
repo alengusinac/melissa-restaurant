@@ -19,7 +19,15 @@ var bookingsRouter = require('./routes/bookings');
 
 var app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: [
+      'https://melissa-restaurant.onrender.com',
+      'http://localhost:5173',
+    ],
+  })
+);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
