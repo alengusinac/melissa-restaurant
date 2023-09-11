@@ -1,0 +1,35 @@
+@import "../styles/index.scss";
+
+.header {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-color);
+
+  .title,
+  a,
+  .name {
+    font-family: "Imperial Script", cursive;
+    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+}
+
+.headerHeight {
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 100px;
+  }
+}

@@ -1,0 +1,27 @@
+# Daily Standup Report
+
+## Wazzup?
+
+> Yesterday I…, today I will…, I need help with…, I'm stuck with…, TIL…
+
+
+### Björn
+igår:
+Gjorde mockups för frontend, landnings sida, kontaktsida och bokningssida samt enklare admin sida.
+idag:
+Börja med att bryta ner till issues så att man bara kan plocka och börja arbeta vidare.
+hjälp:
+Kolla på mockup och issues tillsammans.
+
+
+### Abdullah
+
+
+
+### Alen
+igår:
+repeterade mongoose och byggde basic endpoints.
+idag:
+skapa issues för backend logik och kanske hinna göra några.
+hjälp:
+kolla på logik för lediga bord i backend.
