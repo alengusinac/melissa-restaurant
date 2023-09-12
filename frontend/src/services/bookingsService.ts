@@ -4,7 +4,7 @@ import { IPostBooking } from '../models/IPostBooking';
 import { ITable } from '../models/ITable';
 import { get, post } from './serviceBase';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://melissa-restaurant-backend.onrender.com';
 
 export const getAllBookings = async (): Promise<IBooking[]> => {
   const response = await get<IBooking[]>(`${BASE_URL}/bookings/all`);
