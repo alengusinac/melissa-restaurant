@@ -17,7 +17,7 @@ async function main() {
 }
 
 var indexRouter = require('./routes/index');
-var bookingsRouter = require('./routes/bookings');
+// var bookingsRouter = require('./routes/bookings');
 
 var app = express();
 
@@ -38,6 +38,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/bookings', bookingsRouter);
+// app.use('/bookings', bookingsRouter);
 
 module.exports = app;
