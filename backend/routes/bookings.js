@@ -1,5 +1,5 @@
 var express = require('express');
-const BookingsSchema = require('../models/bookings');
+const BookingsSchema = require('../models/bookings.js');
 var router = express.Router();
 const ShortUniqueId = require('short-unique-id');
 
