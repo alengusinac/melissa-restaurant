@@ -5,13 +5,12 @@ var logger = require('morgan');
 var cors = require('cors');
 var app = express();
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(
-    'mongodb+srv://alen:alenalen@cluster0.sususyz.mongodb.net/melissa-restaurant'
-  );
+  await mongoose.connect(process.env.DB_HOST);
 
   console.log('Connected to database.');
 }
